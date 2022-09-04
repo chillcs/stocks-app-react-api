@@ -1,0 +1,40 @@
+/* Imports --- */
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Font Families ---
+font-family: 'Smooch Sans', sans-serif;
+*/
+
+:root {
+   --light: #f2f2f8;
+   --light2: #e5e5ec;
+   --medium: #e2e0ed;
+   --alternate: #c8c4dc;
+   --dark: #3F3D56;
+   --accent: #860F1C;
+   --hover: #bA0A0A;
+   --h1: 35px;
+   --h2: 24px;
+   --h3: 21px;
+   --p: 18px;
+   --xs: 15px;
+}
+
+*, html {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: 'Smooch Sans', sans-serif;
+   font-weight: 400;
+   letter-spacing: 0.5px;
+}
+
+body {
+   margin: auto;
+}
+
+/* GLOBAL STYLES --- */
+
+.btn:hover {
+	cursor: pointer;
+}
