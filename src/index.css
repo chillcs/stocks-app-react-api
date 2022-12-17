@@ -51,10 +51,16 @@ body {
    justify-content: center;
    align-items: center;
    padding: 25px 10px;
+   font-weight: 600;
 }
 
 .heading {
    padding: 10px 5px;
+   font-weight: 600;
+}
+
+.table {
+   margin-bottom: 25px;
 }
 
 .row {
@@ -62,7 +68,12 @@ body {
    display: flex;
 }
 
+.column-heading {
+   font-weight: 600;
+   margin-bottom: 10px;
+}
+
 .column {
    width: 25%;
-   padding: 5px;
+   padding: 0 5px;
 }
