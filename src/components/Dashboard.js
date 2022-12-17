@@ -1,11 +1,25 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 
 const Dashboard = () => {
+	const [cryptoData, setCryptoData] = useState([]);
+	useEffect(() => {
+		fetch(
+			'https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=CAD&apikey=demo'
+		)
+			.then((response) => response.json())
+			.then((data) => {
+				setCryptoData(data);
+			});
+	}, []);
+
+	const BTC_PRICE = Object.values(Object.entries(cryptoData)[0][1])[4];
+
 	const cryptoHoldings = [
 		{
 			symbol: 'BTC',
 			quantity: 0.078892,
-			price: '22944.60',
+			price: BTC_PRICE,
 		},
 		{
 			symbol: 'ETH',
@@ -127,9 +141,9 @@ const Dashboard = () => {
 						<div className="column column-heading">Quantity</div>
 						<div className="column column-heading">Value</div>
 					</div>
-					{cryptoHoldings.map((holding) => {
+					{cryptoHoldings.map((holding, index) => {
 						return (
-							<div className="row">
+							<div className="row" key={index}>
 								<div className="column">{holding.symbol}</div>
 								<div className="column">{holding.price}</div>
 								<div className="column">{holding.quantity}</div>
@@ -148,9 +162,9 @@ const Dashboard = () => {
 						<div className="column column-heading">Quantity</div>
 						<div className="column column-heading">Value</div>
 					</div>
-					{stockHoldingsCAD.map((holding) => {
+					{stockHoldingsCAD.map((holding, index) => {
 						return (
-							<div className="row">
+							<div className="row" key={index}>
 								<div className="column">{holding.symbol}</div>
 								<div className="column">{holding.price}</div>
 								<div className="column">{holding.quantity}</div>
@@ -169,9 +183,9 @@ const Dashboard = () => {
 						<div className="column column-heading">Quantity</div>
 						<div className="column column-heading">Value</div>
 					</div>
-					{stockHoldingsUSD.map((holding) => {
+					{stockHoldingsUSD.map((holding, index) => {
 						return (
-							<div className="row">
+							<div className="row" key={index}>
 								<div className="column">{holding.symbol}</div>
 								<div className="column">{holding.price}</div>
 								<div className="column">{holding.quantity}</div>
