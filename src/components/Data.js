@@ -22,7 +22,7 @@ const Data = () => {
 	// const [movingAvg50, setMovingAvg50] = useState(0); // 50DayMovingAverage
 	// const [movingAvg200, setMovingAvg200] = useState(0); // 200DayMovingAverage
 
-	const SYMBOL = 'F';
+	const SYMBOL = 'LLY';
 	const URL_DATA = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${SYMBOL}&apikey=${API_KEY}`;
 	const URL_QUOTE = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${SYMBOL}&apikey=${API_KEY}`;
 

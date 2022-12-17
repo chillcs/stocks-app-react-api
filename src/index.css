@@ -38,3 +38,31 @@ body {
 .btn:hover {
 	cursor: pointer;
 }
+
+/* DASHBOARD --- */
+
+.dashboard {
+   padding: 10px 10px;
+}
+
+.page-title {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 25px 10px;
+}
+
+.heading {
+   padding: 10px 5px;
+}
+
+.row {
+   width: 100%;
+   display: flex;
+}
+
+.column {
+   width: 25%;
+   padding: 5px;
+}
