@@ -47,16 +47,28 @@ body {
 
 .page-title {
    width: 100%;
+   padding: 25px 10px;
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 25px 10px;
+   font-size: 1.5rem;
    font-weight: 600;
 }
 
-.heading {
+.portfolio {
    padding: 10px 5px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.portfolio-title {
    font-weight: 600;
+}
+
+.portfolio-btn {
+   margin-left: 5px;
+   padding: 2px 5px;
 }
 
 .table {
