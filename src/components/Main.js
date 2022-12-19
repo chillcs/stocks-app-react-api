@@ -84,6 +84,7 @@ const Main = () => {
 						<div className="column column-heading">Quantity</div>
 						<div className="column column-heading">Price</div>
 						<div className="column column-heading">Value</div>
+						<div className="column column-heading">Indicators</div>
 					</div>
 					{HOLDINGS_USD.map((holding, i) => {
 						return (
@@ -92,6 +93,13 @@ const Main = () => {
 								<div className="column">{holding.quantity}</div>
 								<div className="column">${stocksUSD[i]['ask'].toFixed(2).toLocaleString()}</div>
 								<div className="column">${(stocksUSD[i]['ask'] * holding.quantity).toFixed(2).toLocaleString()}</div>
+								<div className="column indicators">
+									<div className="indicator">{stocksUSD[i]['fiftyTwoWeekLowChangePercent'] > 0.6 ? 'S' : stocksUSD[i]['fiftyTwoWeekHighChangePercent'] < -0.4 ? 'B' : 'H'}</div>
+									<div className="indicator">xx</div>
+									<div className="indicator">xx</div>
+									<div className="indicator">xx</div>
+									<div className="indicator">xx</div>
+								</div>
 							</div>
 						);
 					})}
