@@ -171,20 +171,22 @@ body {
 
 .indicators {
 	display: flex;
+	margin-top: -15px;
 }
 
 .indicator {
 	width: 20%;
+	font-size: 40px;
 }
 
-.indicator .buy {
+.buy {
 	color: green;
 }
 
-.indicator .sell {
+.sell {
 	color: red;
 }
 
-.indicator .hold {
+.hold {
 	color: orange;
 }

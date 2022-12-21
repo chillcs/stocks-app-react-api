@@ -1,8 +1,8 @@
 import React from 'react';
 import { HOLDINGS_USD } from './HoldingsUSD';
-import { INDICATORS } from './Indicators';
+import Indicators from './Indicators';
 
-const Dashboard = (data) => {
+const Dashboard = (props) => {
 	return (
 		<>
 			<div className="dashboard">
@@ -20,24 +20,18 @@ const Dashboard = (data) => {
 					</div>
 					{HOLDINGS_USD.map((holding, i) => {
 						return (
-							<div className="row" key={i}>
+							<div
+								className="row"
+								key={i}
+							>
 								<div className="column">{holding.symbol}</div>
 								<div className="column">{holding.quantity}</div>
-								<div className="column">
-									${data.stocksUSD[i]['ask'].toFixed(2).toLocaleString()}
-								</div>
-								<div className="column">
-									${(data.stocksUSD[i]['ask'] * holding.quantity).toFixed(2).toLocaleString()}
-								</div>
-								<div className="column indicators">
-									{INDICATORS.map((indicator, i) => {
-										return (
-											<div className="indicator" key={i}>
-												{indicator.buy ? 'B' : 'S'}
-											</div>
-										);
-									})}
-								</div>
+								<div className="column">${props.stocksUSD[i]['ask'].toFixed(2).toLocaleString()}</div>
+								<div className="column">${(props.stocksUSD[i]['ask'] * holding.quantity).toFixed(2).toLocaleString()}</div>
+								<Indicators
+									stocksUSD={props.stocksUSD}
+									i={i}
+								/>
 							</div>
 						);
 					})}
@@ -48,3 +42,4 @@ const Dashboard = (data) => {
 };
 
 export default Dashboard;
+

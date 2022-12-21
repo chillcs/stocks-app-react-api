@@ -1,0 +1,5 @@
+{
+	"prettier.endOfLine": "crlf",
+	"prettier.printWidth": 200,
+	"prettier.singleAttributePerLine": true
+}
