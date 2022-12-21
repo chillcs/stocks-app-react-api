@@ -16,7 +16,7 @@ const Indicators = (props) => {
 	let B5 = props.stocksUSD[props.i]['forwardPE'] < props.stocksUSD[props.i]['trailingPE'] / 1.15;
 	let S5 = props.stocksUSD[props.i]['forwardPE'] > props.stocksUSD[props.i]['trailingPE'] * 1.15;
 
-	const symbol = '•';
+	const symbol = '▮';
 
 	return (
 		<>
