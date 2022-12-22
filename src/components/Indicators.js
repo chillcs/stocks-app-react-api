@@ -1,20 +1,20 @@
 import React from 'react';
 
 const Indicators = (props) => {
-	let B1 = props.stocksUSD[props.i]['fiftyDayAverage'] > props.stocksUSD[props.i]['twoHundredDayAverage'];
-	let S1 = props.stocksUSD[props.i]['fiftyDayAverage'] < props.stocksUSD[props.i]['twoHundredDayAverage'];
+	let B1 = props.stocksData[props.i]['fiftyDayAverage'] > props.stocksData[props.i]['twoHundredDayAverage'];
+	let S1 = props.stocksData[props.i]['fiftyDayAverage'] < props.stocksData[props.i]['twoHundredDayAverage'];
 
-	let B2 = props.stocksUSD[props.i]['twoHundredDayAverageChangePercent'] < 0;
-	let S2 = props.stocksUSD[props.i]['twoHundredDayAverageChangePercent'] > 0.2;
+	let B2 = props.stocksData[props.i]['twoHundredDayAverageChangePercent'] < 0;
+	let S2 = props.stocksData[props.i]['twoHundredDayAverageChangePercent'] > 0.2;
 
-	let B3 = props.stocksUSD[props.i]['fiftyTwoWeekHighChangePercent'] < -0.4;
-	let S3 = props.stocksUSD[props.i]['fiftyTwoWeekLowChangePercent'] > 0.6;
+	let B3 = props.stocksData[props.i]['fiftyTwoWeekHighChangePercent'] < -0.4;
+	let S3 = props.stocksData[props.i]['fiftyTwoWeekLowChangePercent'] > 0.6;
 
-	let B4 = props.stocksUSD[props.i]['epsTrailingTwelveMonths'] < props.stocksUSD[props.i]['epsForward'] / 1.15;
-	let S4 = props.stocksUSD[props.i]['epsTrailingTwelveMonths'] > props.stocksUSD[props.i]['epsForward'] * 1.15;
+	let B4 = props.stocksData[props.i]['epsTrailingTwelveMonths'] < props.stocksData[props.i]['epsForward'] / 1.15;
+	let S4 = props.stocksData[props.i]['epsTrailingTwelveMonths'] > props.stocksData[props.i]['epsForward'] * 1.15;
 
-	let B5 = props.stocksUSD[props.i]['forwardPE'] < props.stocksUSD[props.i]['trailingPE'] / 1.15;
-	let S5 = props.stocksUSD[props.i]['forwardPE'] > props.stocksUSD[props.i]['trailingPE'] * 1.15;
+	let B5 = props.stocksData[props.i]['forwardPE'] < props.stocksData[props.i]['trailingPE'] / 1.15;
+	let S5 = props.stocksData[props.i]['forwardPE'] > props.stocksData[props.i]['trailingPE'] * 1.15;
 
 	const symbol = '▮';
 
